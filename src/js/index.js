@@ -10,6 +10,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./components/App";
+// import App2 from "./react-components/components/Routes";
 
 function render() {
   ReactDOM.render(<App />, document.getElementById("container"));

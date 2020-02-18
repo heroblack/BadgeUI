@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].[hash].js" /*nombre de bundel */,
-    publicPath: "http://localhost:9000/",
+    publicPath: "http://localhost:9001/",
     chunkFilename: "js/[id].[hash].js"
   },
   mode: "development",
@@ -21,7 +21,7 @@ module.exports = {
     //compress: true,
     historyApiFallback: true,
     //host: "0.0.0.0",
-    port: 9000,
+    port: 9001,
     inline: true,
     open: true
     // publicPath: "dist/src/js/"

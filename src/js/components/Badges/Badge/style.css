@@ -29,6 +29,7 @@
       background: rgba(255, 255, 255, 0.2);
       margin: 0px;
     }
+    
   }
   &__avatar {
     border-radius: 50%;
@@ -48,6 +49,7 @@
   &__participante {
     display: flex;
     justify-content: center;
+    padding: 10px 0;
   }
   /* @media (--small) {
     background: blue;
