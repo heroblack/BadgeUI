@@ -1,33 +1,33 @@
 import React, { Component,Fragment } from 'react'
+import LabelError from '../../Errors/LabelError'
 
-class BadgeForm extends Component {
-   constructor(props) {
-       super(props)
-   }
 
-   render() {
-       return(
+function BadgeForm(props) {
+     return (
            <Fragment>
-               <form>
+               <h1>Badge New</h1>
+                {/* <form onSubmit={handleSubmit}> */}
+                  <form onSubmit={props.onSubmit}> 
                    <div className="form-group">
                        <label html="form-group">First Name</label>
                        <input 
-                              onChange={this.props.onChange}
+                              onChange={props.onChange}
                               className="form-control" 
                               type="text" 
                               name="firstName"
-                              value={this.props.formValues.firtsName}
+                              value={props.formValues.firtsName}
+                              required
                         /> 
                    </div>
 
                    <div className="form-group">
                        <label html="form-group">Last Name</label>
                        <input 
-                              onChange={this.props.onChange}
+                              onChange={props.onChange}
                               className="form-control" 
                               type="text" 
                               name="lastName"
-                              value={this.props.formValues.lastName}
+                              value={props.formValues.lastName}
                   
                         /> 
                    </div>
@@ -35,11 +35,11 @@ class BadgeForm extends Component {
                    <div className="form-group">
                        <label html="form-group">Email</label>
                        <input 
-                              onChange={this.props.onChange}
+                              onChange={props.onChange}
                               className="form-control" 
                               type="email" 
                               name="email"
-                              value={this.props.formValues.email}
+                              value={props.formValues.email}
                   
                         /> 
                    </div>
@@ -48,11 +48,11 @@ class BadgeForm extends Component {
                    <div className="form-group">
                        <label htmlFor="">job Title</label>
                        <input
-                         onChange={this.props.onChange}
+                         onChange={props.onChange}
                          className="form-control"
                          type="text"
                          name="jobTitle"
-                         value={this.props.formValues.jobTitle}
+                         value={props.formValues.jobTitle}
                         />
                     </div>
 
@@ -61,24 +61,23 @@ class BadgeForm extends Component {
                    <div className="form-group">
                        <label html="form-group">twitter</label>
                        <input 
-                              onChange={this.props.onChange}
+                              onChange={props.onChange}
                               className="form-control" 
                               type="text" 
-                              name="twitter">
-                              value={this.props.formValues.twitter}    
-                  
-                        </input> 
+                              name="twitter"
+                              value={props.formValues.twitter}    
+                        /> 
                    </div>
 
-                   <button type="submit" onClick={this.handleClick} className="btn btn-primary">
-            Guardar
-          </button>
+                   <button type="submit"  className="btn btn-primary">Guardar</button>
+                   {props.error && (<LabelError error={props.error}/>)}
+                   
 
                </form>
            </Fragment>   
        ) 
 
-   }
+   
 }
 
 export default BadgeForm

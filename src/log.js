@@ -36,9 +36,9 @@ const api = {
     create(badge) {
       //throw new Error("500: Error del servidor");
       return callApi("/badges", {
-        method: "POST",
-        body: JSON.stringify(badge)
-      });
+         method: "POST",
+         body: JSON.stringify(badge)
+       });
     },
 
     read(badgeId) {

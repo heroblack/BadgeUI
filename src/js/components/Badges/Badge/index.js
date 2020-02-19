@@ -7,10 +7,14 @@ class Badge extends Component{
 
   constructor(props) {
     super(props)
+   
+
   }
 
     render() {
+      const {email,firstName,lastName,jobTitle, twitter} = this.props.formValues
         return (
+          
           <Fragment>
             <div className="Badge">
 
@@ -20,17 +24,17 @@ class Badge extends Component{
                
                 <div className="Badge__participante">
                    <Gravatar className="Badge__avatar"
-                    email="fabiorojas7@gmail.com"
+                    email={email || 'fabiorojas7@gmail.com'}
                     alt="Avatar"
                    />
                    <h1 className="Badge__section-name">
-                     Fabio <br/> Rojas
+                     {firstName || 'Fabio' } <br/> {lastName || 'Rojas' } 
                    </h1>
                 </div>
 
                <div className="Badge__section-info">
-                 <h5>{this.props.jobTitle || 'JavaScript Developer'}</h5>
-                 <p>@{this.props.twitter || 'hackchan77'}</p>
+                 <h5>{jobTitle || 'Backend and frontend JS'}</h5>
+                 <p>@{twitter  || 'hackchan77' }</p>
                </div>
 
                <div className="Badge__footer">#platziconf</div>
