@@ -15,7 +15,7 @@ function BadgeForm(props) {
                               className="form-control" 
                               type="text" 
                               name="firstName"
-                              value={props.formValues.firtsName}
+                              value={props.formValues.firstName}
                               required
                         /> 
                    </div>

@@ -42,6 +42,7 @@ const api = {
     },
 
     read(badgeId) {
+      //throw new Error("Error en el Servidor, estas es una prueba d un mensaje mas largo que el coran y estamnosviendo que hay presion internacionl y mas de todo un poco");
       return callApi(`/badges/${badgeId}`);
     },
 
