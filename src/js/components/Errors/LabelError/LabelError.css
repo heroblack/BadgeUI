@@ -1,0 +1,15 @@
+.labelError {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: red;
+    color:white;
+    padding: 1px 5px;
+    border:1px dashed white;
+    margin: 10px 0;
+    font-size: 18px;
+    & p {
+        margin:0;
+    }
+}
+

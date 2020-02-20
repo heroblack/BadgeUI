@@ -1,0 +1,24 @@
+.container2 {
+  background: rgba(10, 20, 22, 0.9);
+  padding: 20px;
+}
+.pacmanError {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("../../../image/404-error.jpg"); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  
+}
+
+.pacmanError h3 {
+  position: absolute;
+  top: 50px;
+  color: white;
+  background: red;
+  padding: 10px 50px;
+  border-radius: 10px;
+}

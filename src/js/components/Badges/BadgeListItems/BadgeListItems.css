@@ -1,0 +1,17 @@
+.Card {
+    display: flex;
+    justify-content: space-between
+
+}
+
+.Card__Logo {
+ margin: 0;
+ padding: 0;
+ background: red;
+}
+
+.Card__description {
+    width: 200px;
+    text-align: center;
+    
+}
